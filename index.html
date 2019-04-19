@@ -6,21 +6,56 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Countries Search</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
     <link rel='stylesheet' type='text/css' href='css/style.css'>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1>Country search engine</h1>
     </header>
-    <button id="search">Search a country</button>
-    <input id="country-name" type="text" />
+    <div class="form">
+        <label> 
+            Name of searched country:
+            <input id="country-name" type="text" placeholder="Poland">
+        </label>
+        <button class="btn" id="search">Search a country</button>
+    </div>
     <div class="output">
         <h2>List of countries</h2>
-        <ul id="countries">
-            <li>No data</li>
+        <ul class="countries-list" id="countries">
         </ul>
     </div>
+    <script id="table-template" type="x-tmpl-mustache">
+        <div class="countries-table">
+            <div class="country">
+                <img class="flag" src="{{flag}}" alt="flag">
+                <h3>{{name}}</h3>
+            </div>
+            <table class="table">
+                <tr>
+                    <th colspan="2">Country Information:</td>
+                </tr>
+                <tr>
+                    <td>Capital:</td>
+                    <td>{{capital}}</td>
+                </tr>
+                <tr>
+                    <td>Currency:</td>
+                    <td>{{currencies[0].name}}</td>
+                </tr>
+                <tr>
+                    <td>Region:</td>
+                    <td>{{region}}</td>
+                </tr>
+                <tr>
+                    <td>Population:</td>
+                    <td>{{population}}</td>
+                </tr>
+            </table>
+        </div>
+    </script>
+    <script src="vendor/mustache.js"></script>
     <script src='js/script.js'></script>
 </body>
 

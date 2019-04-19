@@ -1,11 +1,17 @@
 const url = 'https://restcountries.eu/rest/v2/name/';
 const countriesList = document.getElementById('countries');
 const searchButton = document.getElementById('search');
-
+const countryInput = document.getElementById('country-name');
+countryInput.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        searchButton.click();
+    }
+})
 searchButton.addEventListener('click', searchCountries);
 
 function searchCountries() {
-    let countryName = document.getElementById('country-name').value;
+    let countryName = countryInput.value;
     if (!countryName.length) {
         countryName = 'Poland';
     }
@@ -15,17 +21,19 @@ function searchCountries() {
                 window.alert('Sorry, nothing found');
             } else {
                 return resp.json()
-                .then(showCountriesList)
+                    .then(showCountriesList);
             }
-        })
+        });
 }
 
 function showCountriesList(resp) {
+    const template = document.getElementById('table-template').innerHTML;
     countriesList.innerHTML = '';
-    console.log(resp);
     resp.forEach(element => {
+        console.log(element.currencies[0].name);
         let listItem = document.createElement('li');
-        listItem.innerText = element.name;
+        let table = Mustache.render(template, element);
+        listItem.innerHTML = table;
         countriesList.appendChild(listItem);
-    });
+    }); 
 }
