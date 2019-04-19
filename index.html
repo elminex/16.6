@@ -14,22 +14,22 @@
     <header class="header">
         <h1>Country search engine</h1>
     </header>
-    <div class="form">
+    <div class="input">
         <label> 
             Name of searched country:
-            <input id="country-name" type="text" placeholder="Poland">
+            <input class="input__field" id="country-name" type="text" placeholder="Poland">
         </label>
-        <button class="btn" id="search">Search a country</button>
+        <button class="input__btn" id="search">Search a country</button>
     </div>
     <div class="output">
         <h2>List of countries</h2>
-        <ul class="countries-list" id="countries">
+        <ul class="output__list" id="countries">
         </ul>
     </div>
     <script id="table-template" type="x-tmpl-mustache">
-        <div class="countries-table">
+        <div>
             <div class="country">
-                <img class="flag" src="{{flag}}" alt="flag">
+                <img class="country__flag" src="{{flag}}" alt="flag">
                 <h3>{{name}}</h3>
             </div>
             <table class="table">

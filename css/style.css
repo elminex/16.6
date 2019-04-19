@@ -4,15 +4,19 @@
 
 .header h1 { margin: 0; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 3rem; text-shadow: 3px 2px 6px black; }
 
-.form { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; }
+.input { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; }
 
-.form input { margin-bottom: 30px; }
+.input__field { margin-bottom: 30px; }
 
-.btn { height: 40px; width: 200px; }
+.input__btn { height: 40px; width: 200px; }
 
 .output { width: 100%; max-width: 800px; margin: 0 auto; }
 
 .output h2 { text-align: center; }
+
+.output__list { list-style-type: none; padding: 0; }
+
+.output__list li { margin-bottom: 25px; }
 
 .table { width: 100%; background-size: cover; border-collapse: collapse; table-layout: fixed; }
 
@@ -22,8 +26,4 @@
 
 .country { display: -ms-flexbox; display: flex; height: 100px; width: 100%; -ms-flex-align: center; align-items: center; border: 1px solid black; background-color: lightgrey; }
 
-.flag { display: inline-block; height: 100%; width: 150px; margin-right: 25px; padding: 10px; }
-
-.countries-list { list-style-type: none; padding: 0; }
-
-.countries-list li { margin-bottom: 25px; }
+.country__flag { display: inline-block; height: 100%; width: 150px; margin-right: 25px; padding: 10px; }
