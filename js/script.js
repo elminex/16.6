@@ -15,6 +15,7 @@ function searchCountries() {
     if (!countryName.length) {
         countryName = 'Poland';
     }
+    document.getElementById('search-value').innerHTML = `Your search: "${countryName}"`;
     fetch(url + countryName)
         .then((resp) => {
             if (resp.status !== 200) {
@@ -30,7 +31,6 @@ function showCountriesList(resp) {
     const template = document.getElementById('table-template').innerHTML;
     countriesList.innerHTML = '';
     resp.forEach(element => {
-        console.log(element.currencies[0].name);
         let listItem = document.createElement('li');
         let table = Mustache.render(template, element);
         listItem.innerHTML = table;

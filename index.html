@@ -23,6 +23,7 @@
     </div>
     <div class="output">
         <h2>List of countries</h2>
+        <p id="search-value"></p>
         <ul class="output__list" id="countries">
         </ul>
     </div>
@@ -42,7 +43,7 @@
                 </tr>
                 <tr>
                     <td>Currency:</td>
-                    <td>{{currencies[0].name}}</td>
+                    <td>{{currencies.0.name}}, {{currencies.0.code}}</td>
                 </tr>
                 <tr>
                     <td>Region:</td>

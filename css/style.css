@@ -1,14 +1,16 @@
 * { box-sizing: border-box; }
 
+body { background-color: #fff7ed; }
+
 .header { text-align: center; width: 100%; background: url("https://images.pexels.com/photos/697662/pexels-photo-697662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center; height: 30vh; margin-bottom: 60px; }
 
-.header h1 { margin: 0; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 3rem; text-shadow: 3px 2px 6px black; }
+.header h1 { margin: 0; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 3rem; padding: 20px; text-shadow: 3px 2px 6px black; background-color: rgba(0, 0, 0, 0.5); }
 
-.input { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; }
+.input { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; font-size: 1.2rem; margin-bottom: 40px; }
 
 .input__field { margin-bottom: 30px; }
 
-.input__btn { height: 40px; width: 200px; }
+.input__btn { height: 40px; width: 200px; background-color: #87682D; color: #f8f2e9; }
 
 .output { width: 100%; max-width: 800px; margin: 0 auto; }
 
@@ -18,12 +20,14 @@
 
 .output__list li { margin-bottom: 25px; }
 
-.table { width: 100%; background-size: cover; border-collapse: collapse; table-layout: fixed; }
+.table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 1.2rem; background-color: #D9BF99; }
 
-.table td { border: 1px solid red; padding: 8px; }
+.table td { border: 1px solid black; padding: 8px; }
 
-.table th { border: 1px solid blue; padding: 8px; }
+.table th { border: 1px solid black; padding: 8px; }
 
-.country { display: -ms-flexbox; display: flex; height: 100px; width: 100%; -ms-flex-align: center; align-items: center; border: 1px solid black; background-color: lightgrey; }
+.country { display: -ms-flexbox; display: flex; height: 100px; width: 100%; -ms-flex-align: center; align-items: center; border: 1px solid black; background-color: #CFA754; }
+
+.country h3 { font-size: 1.5rem; text-transform: uppercase; }
 
 .country__flag { display: inline-block; height: 100%; width: 150px; margin-right: 25px; padding: 10px; }
